@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import CaughtPokemon from './components/CaughtPokemon'
 
-let namePokemon = "pikachu";
+let namePokemon = "Pikachu";
+
+let abilities = ['Anticipation', 'Adaptability', 'Run-Away'];
 
 function Logo() {
   const appName = "Pokedex";
@@ -18,15 +21,25 @@ function Logo() {
   );
 };
 
-const Bestpokemon = () =>   
-  <p> My favorite pokemon is {`${namePokemon} :D <3`} </p>; // uso de llaves para escribir JS en JSX
-  const App = () => {
-    return (
+let Bestpokemon = () => {
+  return( 
+  <>
+  <p><h1>My favorite pokemon is {`${namePokemon} :D <3`} </h1></p>
+  <ul>
+    {abilities.map((ability,index) => <li key={index}>{ability} {index}</li>)}
+  </ul>
+  </>
+  )
+};
+
+function App(){
+  return (
       <>
       <Logo/>
       <Bestpokemon/>
+      <CaughtPokemon/>
       </>
     );
-  }; 
+  }
 
-export default App;
+ export default App;
