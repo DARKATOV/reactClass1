@@ -1,6 +1,8 @@
-let CaughtPokemon = () => {
-    const date = new Date().toLocaleDateString();      // uso de llaves para escribir JS en JSX
-    return <p><h3>Caught 0 Pokemon on {`${date}`}</h3></p>;
+import React from "react";
+
+let CaughtPokemon = ({date}) => {
+          // uso de llaves para escribir JS en JSX
+    return <p><h3>Caught 1 Pokemon on {`${date}`}</h3></p>;
 };
 
 
