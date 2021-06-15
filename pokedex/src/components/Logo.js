@@ -1,11 +1,10 @@
 import React from "react";
 
-function Logo() {
-    const appName = "Pokedex";
+function Logo(props) {
     return (
       <div>
         <h1>
-          Welcome to {appName}
+          Welcome to {props.appName}
         </h1>
         <img
         alt = "pokemonImage"
